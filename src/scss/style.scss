@@ -4,16 +4,30 @@
 @import "reset";
 
 :root {
-  --white-color: #ffffff;
+  --white-color: #FFFFFF;
   --black-color: #000000;
+  --vulcan: #10101D;
+  --picton-blue: #42A9ED;
+  --picton-blue-2: #43ABF0;
+  --havelock-blue: #3E9CDC;
+
+  --font-family-main-400: "Lato-Regular", Helvetica, Arial, sans-serif;
+  --font-family-main-600: "Lato-SemiBold", Helvetica, Arial, sans-serif;
+  --font-family-main-700: "Lato-Bold", Helvetica, Arial, sans-serif;
+  --font-family-secondary-800: "Raleway-ExtraBold", "Helvetica Neue", "Arial Black", Arial, sans-serif;
 }
 
-$white-color: #ffffff;
+$white-color: #FFFFFF;
 $black-color: #000000;
+$vulcan: #10101D;
+$picton-blue: #42A9ED;
+$picton-blue-2: #43ABF0;
+$havelock-blue: #3E9CDC;
 
 @import "blocks/visually-hidden";
 @import "blocks/button";
 @import "blocks/container";
 @import "blocks/main";
 @import "blocks/header";
+@import "blocks/hero";
 @import "blocks/footer";

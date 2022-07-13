@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../Lato-Bold.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-SemiBold";
+  src: url("../fonts/Lato-SemiBold.woff2") format("woff2"), url("../Lato-SemiBold.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway-ExtraBold";
+  src: url("../fonts/Raleway-ExtraBold.woff2") format("woff2"), url("../Raleway-ExtraBold.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../Lato-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: var(--font-family-main-400);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 135%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+  --vulcan: #10101D;
+  --picton-blue: #42A9ED;
+  --picton-blue-2: #43ABF0;
+  --havelock-blue: #3E9CDC;
+  --font-family-main-400: "Lato-Regular", Helvetica, Arial, sans-serif;
+  --font-family-main-600: "Lato-SemiBold", Helvetica, Arial, sans-serif;
+  --font-family-main-700: "Lato-Bold", Helvetica, Arial, sans-serif;
+  --font-family-secondary-800: "Raleway-ExtraBold", "Helvetica Neue", "Arial Black", Arial, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  border: none;
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(16, 16, 29, 0.9);
+  transition: height 0.2s ease;
+}
+
+.header--compressed {
+  height: 70px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header__logo {
+  display: block;
+  margin-right: auto;
+  font-family: var(--font-family-secondary-800);
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+.header__logo span {
+  color: #42A9ED;
+}
+
+.header__menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__item + .header__item {
+  margin-left: 60px;
+}
+
+.header__link {
+  font-family: var(--font-family-main-600);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+@media (min-width: 1023.98px) and (hover) {
+  .header__link {
+    transition: color 0.2s ease-in;
+  }
+  .header__link:hover {
+    color: #43ABF0;
+  }
+}
+.hero {
+  padding: 200px 0;
+  min-height: 850px;
+  background-color: #F7F9FB;
+  background-image: url("../../images/hero/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 80px;
+  font-family: var(--font-family-main-700);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+}
+.hero__title span {
+  color: #3E9CDC;
+}
+
+.hero__paragraph {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: var(--font-family-main-400);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.hero__paragraph--bold {
+  font-family: var(--font-family-main-700);
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */
