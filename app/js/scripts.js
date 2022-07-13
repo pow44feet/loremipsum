@@ -5,7 +5,7 @@ $(window).scroll(function() {
       $('header').addClass("header--compressed");
     }
     else{
-      $('header').removeClass("header--compressed");
+    $('header').removeClass("header--compressed");
     }
 });
 

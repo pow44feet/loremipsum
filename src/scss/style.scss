@@ -10,11 +10,15 @@
   --picton-blue: #42A9ED;
   --picton-blue-2: #43ABF0;
   --havelock-blue: #3E9CDC;
+  --storm-gray: #6F6D7B;
+  --shark: #2A2B30;
 
   --font-family-main-400: "Lato-Regular", Helvetica, Arial, sans-serif;
   --font-family-main-600: "Lato-SemiBold", Helvetica, Arial, sans-serif;
   --font-family-main-700: "Lato-Bold", Helvetica, Arial, sans-serif;
   --font-family-secondary-800: "Raleway-ExtraBold", "Helvetica Neue", "Arial Black", Arial, sans-serif;
+
+  --border-radius-small: 4px;
 }
 
 $white-color: #FFFFFF;
@@ -23,11 +27,16 @@ $vulcan: #10101D;
 $picton-blue: #42A9ED;
 $picton-blue-2: #43ABF0;
 $havelock-blue: #3E9CDC;
+$storm-gray: #6F6D7B;
+$shark: #2A2B30;
 
 @import "blocks/visually-hidden";
+@import "blocks/page";
 @import "blocks/button";
+@import "blocks/list";
 @import "blocks/container";
 @import "blocks/main";
 @import "blocks/header";
 @import "blocks/hero";
+
 @import "blocks/footer";

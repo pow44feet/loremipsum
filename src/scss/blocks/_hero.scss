@@ -37,3 +37,35 @@
   }
 }
 
+.hero__list {
+  margin-bottom: 80px;
+}
+
+.hero__actions {
+  display: flex;
+}
+
+.hero__button + .hero__button {
+  margin-left: 30px;
+}
+
+@media (min-width: 767.98px) AND (max-width: 991.98px) {
+
+  .hero {
+    background-position: 63% 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .hero__title br {
+    display: none;
+  }
+}
+
+@media (min-width: 479.98px) AND (max-width: 767.98px) {
+
+  .hero {
+    background-position: 5% 50%;
+  }
+}

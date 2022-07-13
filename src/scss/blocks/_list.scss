@@ -1,0 +1,33 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &--dash li {
+    position: relative;
+    margin-bottom: 5px;
+    padding-left: 25px;
+    font-family: var(--font-family-main-400);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $black-color;
+  }
+
+  &--dash li::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 11px;
+    width: 5px;
+    height: 2px;
+    background-color: $black-color;
+  }
+
+  &--dash li:last-child {
+    margin-bottom: 0;
+  }
+
+
+}
+

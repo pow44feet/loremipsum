@@ -5,11 +5,11 @@
   width: 100%;
   height: 100px;
   background-color: rgba($vulcan, 0.9);
-  transition: height .2s ease;
-}
+  transition: height .2s linear;
 
-.header--compressed {
-  height: 70px;
+  &--compressed {
+    height: 70px;
+  }
 }
 
 .header__container {

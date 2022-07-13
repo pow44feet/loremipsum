@@ -1,8 +1,53 @@
 .button {
-    padding: 0;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-small);
+  padding: 5px 10px;
+  font-family: var(--font-family-main-600);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $black-color;
+  background-color: transparent;
+
+  &--small {
+    min-width: 183px;
+    min-height: 43px;
+    font-family: var(--font-family-main-400);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &--blue {
+    border: 1px solid $white-color;
     color: $white-color;
-    border: none;
-    background-color: transparent;
+    background-color: $havelock-blue;
+  }
+
+  &--white {
+    border: 1px solid $storm-gray;
+    color: $shark;
+    background-color: $white-color;
+  }
+
+  @media (min-width: 1023.98px) AND (hover) {
+
+    & {
+      transition: border .2s ease-in, color .2s ease-in;
+    }
+
+    &--blue:hover {
+      background-color: $picton-blue;
+    }
+
+    &--white:hover {
+      border: 1px solid $picton-blue;
+      color: $picton-blue;
+    }
+  }
 }
