@@ -5,9 +5,9 @@
   width: 100%;
   height: 100px;
   background-color: rgba($vulcan, 0.9);
-  transition: height .2s linear;
+  transition: height .2s var(--transition-main);
 
-  &--compressed {
+  &.header--compressed {
     height: 70px;
   }
 }
@@ -57,7 +57,7 @@
 @media (min-width: 1023.98px) AND (hover) {
 
   .header__link {
-    transition: color .2s ease-in;
+    transition: color .2s var(--transition-main);
   }
 
   .header__link:hover {
@@ -81,6 +81,23 @@
 
 @media (max-width: 767.98px) {
 
+  .header {
+    position: relative;
+    height: 85px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($vulcan, 0);
+      transition: background-color .3s var(--transition-main) .1s;
+    }
+  }
+
   .header__logo {
     z-index: 12;
   }
@@ -90,53 +107,33 @@
     top: -100%;
     left: 0;
     z-index: 0;
-    padding: 100px 60px;
+    overflow-y: auto;
+    padding: 100px 60px 40px;
     width: 100%;
     height: 100%;
     background-color: transparent;
     transition-duration: 0s;
     transition-delay: .4s;
-  }
 
-  .menu--active .header__nav {
-    top: 0;
-    transition-delay: .4s;
-  }
+    &::before,
+    &::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      width: 51%;
+      height: 100%;
+      background-color: rgba($vulcan, 1);
+    }
 
-  /* Левая створка */
-  .header__nav::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: -52%;
-    width: 51%;
-    height: 100%;
-    background-color: rgba($vulcan, 1);
-    transition: left .3s ease-in .3s;
-  }
+    &::before {
+      left: -52%;
+      transition: left .3s ease-in .3s;
+    }
 
-  /* Левая створка "закрыта" */
-  .menu--active .header__nav::before {
-    left: 0;
-    transition-delay: 0s;
-  }
-
-  /* Правая створка */
-  .header__nav::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    right: -52%;
-    width: 51%;
-    height: 100%;
-    background-color: rgba($vulcan, 1);
-    transition: right .3s ease-in .3s;
-  }
-
-  /* Правая створка "закрыта" */
-  .menu--active .header__nav::after {
-    right: 0;
-    transition-delay: 0s;
+    &::after {
+      right: -52%;
+      transition: right .3s ease-in .3s;
+    }
   }
 
   .header__menu {
@@ -178,10 +175,7 @@
     transition-delay: .02s;
   }
 
-  .menu--active .header__link {
-    opacity: 1;
-  }
-
+  /* Из неактивного в активное состояние */
   .menu--active .header__item:nth-child(1) .header__link {
     transition-delay: .3s;
   }
@@ -203,5 +197,68 @@
     display: block;
   }
 
+  /* Бургер меню открыто */
+  .menu--active {
 
+    &.header::before {
+      background-color: rgba($vulcan, 1);
+    }
+
+    & .header__nav {
+      top: 0;
+      transition-delay: .4s;
+    }
+
+    /* Левая створка "закрыта" */
+    & .header__nav::before {
+      left: 0;
+      transition-delay: 0s;
+    }
+
+    /* Правая створка "закрыта" */
+    & .header__nav::after {
+      right: 0;
+      transition-delay: 0s;
+    }
+
+    & .header__link {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 549.98px) {
+
+  .header {
+    height: 70px;
+
+    &.header--compressed {
+      height: 60px;
+    }
+  }
+
+  .header__logo {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+@media (max-width: 419.98px) {
+
+  .header {
+    height: 60px;
+
+    &.header--compressed {
+      height: 50px;
+    }
+  }
+
+  .header__logo {
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .header__nav {
+    padding: 85px 45px;
+  }
 }
