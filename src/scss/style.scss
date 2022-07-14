@@ -23,6 +23,7 @@
   --font-family-main-800: "Lato-ExtraBold", Helvetica, Arial, sans-serif;
   --font-family-secondary-800: "Raleway-ExtraBold", "Helvetica Neue", "Arial Black", Arial, sans-serif;
 
+  --border-radius-xsmall: 3px;
   --border-radius-small: 4px;
 
   --transition-main: cubic-bezier(0.767, 0.01, 0.18, 1.01);
@@ -53,5 +54,5 @@ $charade: #272733;
 @import "blocks/hero";
 @import "blocks/order";
 @import "blocks/scheme";
-
+@import "blocks/form";
 @import "blocks/footer";

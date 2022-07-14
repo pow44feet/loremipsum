@@ -82,7 +82,7 @@
 @media (max-width: 767.98px) {
 
   .header {
-    position: relative;
+    z-index: 1;
     height: 85px;
 
     &::before {

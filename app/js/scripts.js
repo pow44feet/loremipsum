@@ -23,3 +23,17 @@ burger.addEventListener("click", function () {
     body.classList.add("body--blocked");
   }
 });
+
+const defaultElements2 = () => {
+  const selects = document.querySelectorAll('.select');
+  const select = selects.forEach(item => {
+      const choices = new Choices(item, {
+          searchEnabled: false,
+        shouldSort: false,
+        itemSelectText: '',
+        placeholder: true,
+        placeholderValue: 'Выберите тип системы',
+      });
+  });
+}
+defaultElements2();
