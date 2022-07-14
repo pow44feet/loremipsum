@@ -3,13 +3,13 @@ const burger = document.querySelector(".burger");
 const body = document.body;
 
 
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 1){
-      $('header').addClass("header--compressed");
-    }
-    else{
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 1) {
+    $('header').addClass("header--compressed");
+  }
+  else {
     $('header').removeClass("header--compressed");
-    }
+  }
 });
 
 burger.addEventListener("click", function () {

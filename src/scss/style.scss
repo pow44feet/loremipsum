@@ -6,16 +6,21 @@
 :root {
   --white-color: #FFFFFF;
   --black-color: #000000;
-  --vulcan: #10101D;
   --picton-blue: #42A9ED;
   --picton-blue-2: #43ABF0;
   --havelock-blue: #3E9CDC;
+  --jelly-bean: #286690;
   --storm-gray: #6F6D7B;
+  --silver: #BBBBBB;
+  --silver-2: #C4C4C4;
+  --vulcan: #10101D;
   --shark: #2A2B30;
+  --charade: #272733;
 
   --font-family-main-400: "Lato-Regular", Helvetica, Arial, sans-serif;
   --font-family-main-600: "Lato-SemiBold", Helvetica, Arial, sans-serif;
   --font-family-main-700: "Lato-Bold", Helvetica, Arial, sans-serif;
+  --font-family-main-800: "Lato-ExtraBold", Helvetica, Arial, sans-serif;
   --font-family-secondary-800: "Raleway-ExtraBold", "Helvetica Neue", "Arial Black", Arial, sans-serif;
 
   --border-radius-small: 4px;
@@ -25,12 +30,16 @@
 
 $white-color: #FFFFFF;
 $black-color: #000000;
-$vulcan: #10101D;
 $picton-blue: #42A9ED;
 $picton-blue-2: #43ABF0;
 $havelock-blue: #3E9CDC;
+$jelly-bean: #286690;
 $storm-gray: #6F6D7B;
+$silver: #BBBBBB;
+$silver-2: #C4C4C4;
+$vulcan: #10101D;
 $shark: #2A2B30;
+$charade: #272733;
 
 @import "blocks/body";
 @import "blocks/visually-hidden";
@@ -42,5 +51,7 @@ $shark: #2A2B30;
 @import "blocks/main";
 @import "blocks/header";
 @import "blocks/hero";
+@import "blocks/order";
+@import "blocks/scheme";
 
 @import "blocks/footer";
