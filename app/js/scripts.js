@@ -12,6 +12,7 @@ $(window).scroll(function () {
   }
 });
 
+
 burger.addEventListener("click", function () {
   if (burger.classList.contains("burger--active")) {
     burger.classList.remove("burger--active");
@@ -23,31 +24,6 @@ burger.addEventListener("click", function () {
     body.classList.add("body--blocked");
   }
 });
-/*
-const defaultElements2 = () => {
-  const selects = document.querySelectorAll('.select');
-  const select = selects.forEach(item => {
-      const choices = new Choices(item, {
-          searchEnabled: false,
-        shouldSort: false,
-        itemSelectText: '',
-        placeholder: false,
-        placeholderValue: 'Выберите тип системы',
-
-      });
-  });
-}
-defaultElements2();
-*/
-
-// const simplebar = () => {
-//   const lists = document.querySelectorAll('.choices__list--dropdown');
-//   const list = lists.forEach(item => {
-//       const bars = new SimpleBar(item);
-//   });
-// }
-// simplebar();
-
 
 
 let select = function() {
@@ -75,6 +51,7 @@ let select = function() {
     select.classList.remove("is-open");
   };
 
+  /* Клик вне селекта закроет его */
   document.addEventListener("click", closeSelect);
 
   function closeSelect(event) {
@@ -87,3 +64,19 @@ let select = function() {
 }
 
 select();
+
+
+let inputRange = function() {
+
+  let input = document.querySelectorAll(".form__range");
+
+  input.forEach(item => {
+    item.addEventListener("input", function () {
+      let value = item.value;
+      let valueField = item.closest(".form__field").querySelector(".form__value");
+      valueField.textContent = value;
+    })
+  })
+}
+
+inputRange();

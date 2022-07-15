@@ -7,6 +7,8 @@
 
 .form__field {
   flex: 0 1 33.333%;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 30px;
   padding: 0 15px;
   max-width: 33.333%;
@@ -54,5 +56,55 @@
   }
 }
 
+.form__name {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--white-color);
+}
 
+.form__value {
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--white-color);
 
+  &::after {
+    content: '%';
+  }
+}
+
+.form__range {
+  appearance: none;
+  display: block;
+  border: 1px solid var(--white-color);
+  border-radius: var(--border-radius-xsmall);
+  padding: 0;
+  width: 100%;
+  height: 6px;
+  background-color: rgba($white-color, 0.7);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  display: block;
+  border: 3px solid var(--jelly-bean);
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  background-color: var(--picton-blue);
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  appearance: none;
+  display: block;
+  border: 3px solid var(--jelly-bean);
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  background-color: var(--picton-blue);
+  cursor: pointer;
+}

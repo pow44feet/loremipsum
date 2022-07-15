@@ -64,3 +64,19 @@ let select = function() {
 }
 
 select();
+
+
+let inputRange = function() {
+
+  let input = document.querySelectorAll(".form__range");
+
+  input.forEach(item => {
+    item.addEventListener("input", function () {
+      let value = item.value;
+      let valueField = item.closest(".form__field").querySelector(".form__value");
+      valueField.textContent = value;
+    })
+  })
+}
+
+inputRange();
