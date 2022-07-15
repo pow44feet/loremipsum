@@ -17,16 +17,13 @@
   --shark: #2A2B30;
   --charade: #272733;
   --bright-gray: #3D4050;
-
   --font-family-main-400: "Lato-Regular", Helvetica, Arial, sans-serif;
   --font-family-main-600: "Lato-SemiBold", Helvetica, Arial, sans-serif;
   --font-family-main-700: "Lato-Bold", Helvetica, Arial, sans-serif;
   --font-family-main-800: "Lato-ExtraBold", Helvetica, Arial, sans-serif;
   --font-family-secondary-800: "Raleway-ExtraBold", "Helvetica Neue", "Arial Black", Arial, sans-serif;
-
   --border-radius-xsmall: 3px;
   --border-radius-small: 4px;
-
   --transition-main: cubic-bezier(0.767, 0.01, 0.18, 1.01);
 }
 
@@ -50,6 +47,8 @@ $bright-gray: #3D4050;
 @import "blocks/button";
 @import "blocks/burger";
 @import "blocks/list";
+@import "blocks/select";
+@import "blocks/simplebar";
 @import "blocks/container";
 @import "blocks/main";
 @import "blocks/header";

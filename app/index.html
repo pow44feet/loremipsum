@@ -30,7 +30,7 @@
   <!--<link rel="shortcut icon" href="favicon.ico">-->
 </head>
 
-<body>
+<body data-simplebar>
 
   <div class="page">
     <header class="page__header header">
@@ -234,26 +234,39 @@
           </ul>
           <form class="order__form form" method="POST" action="send_form.php" enctype="multipart/form-data">
             <div class="form__field">
-              <label class="form__label">
-                <select class="form__select select" name="type" placeholder="Выберите тип системы">
-                  <option value="" selected>Выберите число</option>
-                  <option class="form__select-option" value="Sed ut perspiciatis">
+              <div class="select">
+                <div class="select__head">
+                  <span class="select__current" id="select">
+                    Выберите тип системы
+                  </span>
+                </div>
+                <ul class="select__body" data-simplebar>
+                  <li class="select__item" data-value="Sed ut perspiciatis">
                     Sed ut perspiciatis
-                  </option>
-                  <option class="form__select-option" value="Nemo enim ipsam">
+                  </li>
+                  <li class="select__item" data-value="Nemo enim ipsam">
                     Nemo enim ipsam
-                  </option>
-                  <option class="form__select-option" value="Et harum quidem">
+                  </li>
+                  <li class="select__item" data-value="Et harum quidem">
                     Et harum quidem
-                  </option>
-                  <option class="form__select-option" value="Temporibus autem">
+                  </li>
+                  <li class="select__item" data-value="Temporibus autem">
                     Temporibus autem
-                  </option>
-                  <option class="form__select-option" value="Itaque earum rerum">
+                  </li>
+                  <li class="select__item" data-value="Itaque earum rerum">
                     Itaque earum rerum
-                  </option>
-                </select>
-              </label>
+                  </li>
+                  <li class="select__item" data-value="Itaque earum rerum">
+                    Itaque earum rerum
+                  </li>
+                  <li class="select__item" data-value="Itaque earum rerum">
+                    Itaque earum rerum
+                  </li>
+                  <li class="select__item" data-value="Itaque earum rerum">
+                    Itaque earum rerum
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="form__field">
               <label class="form__label">
@@ -267,7 +280,7 @@
             </div>
             <div class="form__field form__field--twice">
               <span class="form__name">
-
+                Sed ut perspiciatis, unde omnis iste natus
               </span>
               <label class="form__label">
                 <input class="form__input form__input--range" name="range" type="range">

@@ -1,0 +1,20 @@
+.simplebar-track.simplebar-vertical {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  bottom: 3px;
+  width: 7px;
+  border-radius: var(--border-radius-xsmall);
+  background-color: var(--bright-gray);
+
+  & .simplebar-scrollbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: var(--border-radius-xsmall);
+    background-color: var(--havelock-blue);
+    opacity: 1;
+  }
+}

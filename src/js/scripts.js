@@ -12,6 +12,7 @@ $(window).scroll(function () {
   }
 });
 
+
 burger.addEventListener("click", function () {
   if (burger.classList.contains("burger--active")) {
     burger.classList.remove("burger--active");
@@ -24,17 +25,42 @@ burger.addEventListener("click", function () {
   }
 });
 
-const defaultElements2 = () => {
-  const selects = document.querySelectorAll('.select');
-  const select = selects.forEach(item => {
-      const choices = new Choices(item, {
-          searchEnabled: false,
-        shouldSort: false,
-        itemSelectText: '',
-        placeholder: false,
-        placeholderValue: 'Выберите тип системы',
-        
-      });
+
+let select = function() {
+  let select = document.querySelectorAll(".select");
+  let selectHead = document.querySelectorAll(".select__head");
+  let selectItem = document.querySelectorAll(".select__item");
+
+  selectHead.forEach(item => {
+    item.addEventListener("click", selectToggle);
   });
+
+  selectItem.forEach(item => {
+    item.addEventListener("click", selectChoose);
+  });
+
+  function selectToggle() {
+    this.parentElement.classList.toggle("is-open");
+  };
+
+  function selectChoose() {
+    let selectValue = this.dataset.value;
+    let select = this.closest(".select");
+    let currentValue = select.querySelector(".select__current");
+    currentValue.innerText = selectValue;
+    select.classList.remove("is-open");
+  };
+
+  /* Клик вне селекта закроет его */
+  document.addEventListener("click", closeSelect);
+
+  function closeSelect(event) {
+    select.forEach(item => {
+      if (!event.target.closest(".select")) {
+        item.classList.remove("is-open");
+      }
+    });
+  }
 }
-defaultElements2();
+
+select();
