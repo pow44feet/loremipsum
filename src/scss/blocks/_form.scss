@@ -75,6 +75,18 @@
   transform: rotate(0deg) translateY(-50%);
 }
 
+.choices__list--dropdown {
+  overflow-y: scroll !important;
+  min-height: 100%;
+  max-height: 200px;
+}
+
+.choices .choices__list--dropdown .choices__item {
+  padding: 7px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .choices.is-open {
 
   & .choices__inner {
@@ -102,4 +114,12 @@
     border-bottom-right-radius: var(--border-radius-xsmall);
     background-color: rgba($charade, 0.9);
   }
-} 
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices__list--dropdown .choices__placeholder {
+  display: none;
+}

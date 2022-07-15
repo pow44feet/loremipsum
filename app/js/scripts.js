@@ -31,8 +31,9 @@ const defaultElements2 = () => {
           searchEnabled: false,
         shouldSort: false,
         itemSelectText: '',
-        placeholder: true,
+        placeholder: false,
         placeholderValue: 'Выберите тип системы',
+        
       });
   });
 }

@@ -880,6 +880,18 @@ img {
   transform: rotate(0deg) translateY(-50%);
 }
 
+.choices__list--dropdown {
+  overflow-y: scroll !important;
+  min-height: 100%;
+  max-height: 200px;
+}
+
+.choices .choices__list--dropdown .choices__item {
+  padding: 7px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .choices.is-open .choices__inner {
   border: 1px solid var(--bright-gray);
   border-bottom: none;
@@ -901,5 +913,13 @@ img {
   border-bottom-left-radius: var(--border-radius-xsmall);
   border-bottom-right-radius: var(--border-radius-xsmall);
   background-color: rgba(39, 39, 51, 0.9);
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices__list--dropdown .choices__placeholder {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
