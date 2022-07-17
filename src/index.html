@@ -30,7 +30,7 @@
   <!--<link rel="shortcut icon" href="favicon.ico">-->
 </head>
 
-<body data-simplebar>
+<body>
 
   <div class="page">
     <header class="page__header header">
@@ -233,7 +233,7 @@
             </li>
           </ul>
           <form class="order__form form" method="POST" action="send_form.php" enctype="multipart/form-data">
-            <div class="form__field">
+            <div class="form__field form__field--select">
               <div class="select">
                 <div class="select__head">
                   <span class="select__current" id="select">
@@ -268,31 +268,36 @@
                 </ul>
               </div>
             </div>
-            <div class="form__field">
+            <div class="form__field form__field--name">
               <label class="form__label">
                 <input class="form__input" name="email" type="email" placeholder="Ваш e-mail">
               </label>
             </div>
-            <div class="form__field">
+            <div class="form__field form__field--email">
               <label class="form__label">
                 <input class="form__input" name="name" type="text" placeholder="Ваше имя">
               </label>
             </div>
-            <div class="form__field form__field--twice">
+            <div class="form__field form__field--twice form__field--range">
               <span class="form__name">
                 Sed ut perspiciatis, unde omnis iste natus
+                <span class="form__value">75</span>
               </span>
-              <span class="form__value">75</span>
               <label class="form__label">
                 <input class="form__range" name="range" type="range" min="0" max="100" value="75">
               </label>
             </div>
-            <div class="form__field">
-              <label class="form__label form__label--file">
-                <input class="form__input form__input--file" name="file" type="file">
-              </label>
+            <div class="form__field form__field--file">
+              <div class="file">
+                <input class="file__input visually-hidden" id="file" name="file" type="file">
+                <label class="file__label no-file" for="file">
+                  <span>
+                    Прикрепить файл
+                  </span>
+                </label>
+              </div>
             </div>
-            <div class="form__field">
+            <div class="form__field form__field--button">
               <button class="form__button button button--blue" type="submit">
                 Отправить
               </button>
@@ -305,28 +310,30 @@
       <div class="footer__container container">
         <div class="footer__info footer__copyright">
           <p class="footer__paragraph">
-            © 2018 «LoremIpsum.net» Все права защищены.
+            © 2018 <span>«LoremIpsum.net»</span><br>Все права защищены.
           </p>
         </div>
+        <span class="footer__delimiter"></span>
         <ul class="footer__info footer__payment">
-          <li class="footer__payment-item">
-
+          <li class="footer__payment-item footer__payment-item--qiwi">
+            <span>Qiwi</span> wallet
           </li>
-          <li class="footer__payment-item">
-
+          <li class="footer__payment-item footer__payment-item--yandex">
+            Yandex Money
           </li>
-          <li class="footer__payment-item">
-
+          <li class="footer__payment-item footer__payment-item--web-money">
+            Web Money
           </li>
         </ul>
+        <span class="footer__delimiter"></span>
         <ul class="footer__info footer__contacts">
           <li class="footer__contacts-item">
-            <a class="footer__contacts-link" href="mailto:info@ipsum228.com">
+            <a class="footer__contacts-link footer__contacts-link--email" href="mailto:info@ipsum228.com">
               info@ipsum228.com
             </a>
           </li>
           <li class="footer__contacts-item">
-            <a class="footer__contacts-link" href="https://vk.com/umlyaut">
+            <a class="footer__contacts-link footer__contacts-link--vk" href="https://vk.com/umlyaut">
               Мы вконтакте
             </a>
           </li>

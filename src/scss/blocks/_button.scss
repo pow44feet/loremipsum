@@ -38,9 +38,7 @@
   @media (min-width: 1023.98px) AND (hover) {
 
     & {
-      transition: border .2s var(--transition-main),
-                  color .2s var(--transition-main),
-                  background-color .2s var(--transition-main);
+      transition: border .2s var(--transition-main), color .2s var(--transition-main), background-color .2s var(--transition-main);
     }
 
     &--blue:hover {

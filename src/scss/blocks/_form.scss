@@ -1,8 +1,8 @@
 .form {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 -15px;
-  width: 100%;
 }
 
 .form__field {
@@ -34,7 +34,7 @@
   line-height: 22px;
   color: var(--charade);
   background-color: rgba($white-color, 0.85);
-  transition: color .2s var(--transition-main), background-color .2s var(--transition-main);
+  transition: border .2s var(--transition-main), padding .2s var(--transition-main), color .2s var(--transition-main), background-color .2s var(--transition-main);
 
   &::placeholder {
     font-size: 18px;
@@ -45,7 +45,8 @@
   &:focus,
   &:focus-visible {
     outline: none;
-    border: 1px solid var(--havelock-blue);
+    border: 2px solid var(--havelock-blue);
+    padding: 11px 35px 11px 9px;
     color: var(--white-color);
     background-color: rgba($bright-gray, 0.85);
   }
@@ -57,18 +58,21 @@
 }
 
 .form__name {
-  display: block;
-  margin-right: auto;
+  display: flex;
   margin-bottom: 18px;
+  width: 100%;
   font-size: 18px;
   line-height: 22px;
   color: var(--white-color);
 }
 
 .form__value {
+  flex: 0 0 60px;
   display: block;
+  margin-left: auto;
   font-size: 18px;
   line-height: 22px;
+  text-align: right;
   color: var(--white-color);
 
   &::after {
@@ -107,4 +111,76 @@ input[type=range]::-moz-range-thumb {
   height: 24px;
   background-color: var(--picton-blue);
   cursor: pointer;
+}
+
+.form__button {
+  margin-top: 25px;
+  width: 100%;
+  height: 48px;
+}
+
+@media (max-width: 991.98px) {
+
+  .form__field--select {
+    order: 0;
+    flex: 0 1 100%;
+    max-width:100%;
+  }
+
+  .form__field--name {
+    order: 1;
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+
+  .form__field--email {
+    order: 2;
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+
+  .form__field--range {
+    order: 3;
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+
+  .form__field--file {
+    order: 4;
+    flex: 0 1 60%;
+    max-width: 60%;
+  }
+
+  .form__field--button {
+    order: 5;
+    min-width: 370px;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .form__field--file {
+    flex: 0 1 420px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 599.98px) {
+
+  .form__field--name,
+  .form__field--email {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 479.98px) {
+
+  .form__field--file {
+    flex: 0 1 100%;
+  }
+
+  .form__field--button {
+    min-width: 100%;
+  }
 }

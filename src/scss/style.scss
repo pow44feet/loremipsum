@@ -3,54 +3,15 @@
 @import "vars";
 @import "reset";
 
-:root {
-  --white-color: #FFFFFF;
-  --black-color: #000000;
-  --picton-blue: #42A9ED;
-  --picton-blue-2: #43ABF0;
-  --havelock-blue: #3E9CDC;
-  --jelly-bean: #286690;
-  --storm-gray: #6F6D7B;
-  --silver: #BBBBBB;
-  --silver-2: #C4C4C4;
-  --vulcan: #10101D;
-  --shark: #2A2B30;
-  --charade: #272733;
-  --bright-gray: #3D4050;
-  --font-family-main-400: "Lato-Regular", Helvetica, Arial, sans-serif;
-  --font-family-main-600: "Lato-SemiBold", Helvetica, Arial, sans-serif;
-  --font-family-main-700: "Lato-Bold", Helvetica, Arial, sans-serif;
-  --font-family-main-800: "Lato-ExtraBold", Helvetica, Arial, sans-serif;
-  --font-family-secondary-800: "Raleway-ExtraBold", "Helvetica Neue", "Arial Black", Arial, sans-serif;
-  --border-radius-xsmall: 3px;
-  --border-radius-small: 4px;
-  --transition-main: cubic-bezier(0.767, 0.01, 0.18, 1.01);
-}
-
-$white-color: #FFFFFF;
-$black-color: #000000;
-$picton-blue: #42A9ED;
-$picton-blue-2: #43ABF0;
-$havelock-blue: #3E9CDC;
-$jelly-bean: #286690;
-$storm-gray: #6F6D7B;
-$silver: #BBBBBB;
-$silver-2: #C4C4C4;
-$vulcan: #10101D;
-$shark: #2A2B30;
-$charade: #272733;
-$bright-gray: #3D4050;
-
 @import "blocks/body";
 @import "blocks/visually-hidden";
-@import "blocks/page";
 @import "blocks/button";
 @import "blocks/burger";
 @import "blocks/list";
 @import "blocks/select";
+@import "blocks/file";
 @import "blocks/simplebar";
 @import "blocks/container";
-@import "blocks/main";
 @import "blocks/header";
 @import "blocks/hero";
 @import "blocks/order";

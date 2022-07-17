@@ -80,3 +80,37 @@ let inputRange = function() {
 }
 
 inputRange();
+
+
+let inputFile = function() {
+  const files = document.querySelectorAll(".file__input");
+
+  files.forEach(item => {
+    item.addEventListener("change", (e) => {
+      let input = item;
+      const [file] = e.target.files;
+
+      // Создаем переменные для полного наименования файла и его размера
+      let { name: fileName, size } = file;
+      // Создаем отдельные переменные для имени файла и его расширения
+      let nameOfFile = fileName.substring(0, fileName.lastIndexOf(".")),
+          extension = fileName.substring(fileName.lastIndexOf("."));
+      // Если длина имени файла более 20 символов укорачиваем его
+      if (fileName.length > 20) {
+        fileName = `${nameOfFile.substring(0, 10)}...${nameOfFile.substring(nameOfFile.length - 5)}`;
+        // Создаем новое наименование из имени и расширения
+        fileName = fileName + extension;
+      }
+
+      // Приводим размер файла к числу с двумя знаками после точки
+      const fileSize = (size / 1000).toFixed(2);
+      // Генерируем текстовый контент кнопки
+      const fileNameAndSize = `${fileName} / ${fileSize}KB`;
+      let inputContent = input.closest(".file").querySelector(".file__label span");
+      inputContent.textContent = fileNameAndSize;
+
+    });
+  });
+};
+
+inputFile();

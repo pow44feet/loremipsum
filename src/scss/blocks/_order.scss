@@ -52,6 +52,23 @@
   .order {
     background-color: rgba($charade, 0.9);
   }
+
+  .order__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order__form {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .order {
+    padding: 90px 0;
+  }
 }
 
 @media (max-width: 419.98px) {
